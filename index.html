@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Valentina Elore · Author</title>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Playfair+Display:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
   <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -15,18 +17,18 @@
       theme: {
         extend: {
           fontFamily: {
-            display: ['\"Playfair Display\"', 'serif'],
-            body: ['\"EB Garamond\"', 'serif']
+            display: ['"Playfair Display"', 'serif'],
+            body: ['"EB Garamond"', 'serif']
           },
           colors: {
             ink: '#0b0b0e',
             moon: '#f2f2f7',
             gold: '#f5d867',
-            electric: '#4f46e5' // indigo-600-ish
+            electric: '#4f46e5' /* indigo-ish */
           },
           backgroundImage: {
-            // Subtle pop-art halftone-style radial burst
-            'burst': "radial-gradient(circle at 20% 20%, rgba(79,70,229,.15), transparent 40%), radial-gradient(circle at 80% 30%, rgba(245,216,103,.18), transparent 45%), radial-gradient(circle at 50% 80%, rgba(79,70,229,.12), transparent 45%)",
+            burst:
+              "radial-gradient(circle at 20% 20%, rgba(79,70,229,.15), transparent 40%), radial-gradient(circle at 80% 30%, rgba(245,216,103,.18), transparent 45%), radial-gradient(circle at 50% 80%, rgba(79,70,229,.12), transparent 45%)",
           },
           boxShadow: {
             soft: '0 10px 30px -10px rgba(0,0,0,.25)'
@@ -35,9 +37,9 @@
       }
     }
   </script>
+
   <style>
     html { scroll-behavior: smooth; }
-    /* Tiny dotted pattern for comic-zine vibe */
     .dot-grid {
       background-image: radial-gradient(currentColor 0.7px, transparent 0.7px);
       background-size: 8px 8px;
@@ -47,8 +49,8 @@
     .symbol { filter: drop-shadow(0 6px 12px rgba(0,0,0,.15)); }
   </style>
 </head>
+
 <body class="bg-moon text-ink font-body selection:bg-electric/20 selection:text-ink/90">
-  <!-- Site Wrapper -->
   <div class="min-h-screen flex flex-col">
 
     <!-- Header / Nav -->
@@ -56,7 +58,6 @@
       <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
         <a href="#" class="inline-flex items-center gap-2">
           <div class="w-8 h-8 rounded-full bg-electric/90 symbol flex items-center justify-center text-moon">
-            <!-- moon/star glyph -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor" aria-hidden="true">
               <path d="M21.77 15.23A9.5 9.5 0 0 1 8.77 2.23a.75.75 0 0 0-1.03.9A8 8 0 1 0 20.87 16a.75.75 0 0 0 .9-1.03Z"/>
             </svg>
@@ -67,7 +68,7 @@
           <a href="#about" class="hover:underline underline-offset-4">About</a>
           <a href="#books" class="hover:underline underline-offset-4">Books</a>
           <a href="#contact" class="hover:underline underline-offset-4">Contact</a>
-          <a href="#inner compass" class="hover:underline underline-offset-4">Inner Compass BluePrint</a>
+          <a href="#inner-compass" class="hover:underline underline-offset-4">Inner Compass BluePrint</a>
         </nav>
         <a href="#books" class="md:inline-flex hidden px-4 py-2 rounded-xl bg-ink text-moon hover:bg-ink/90 transition shadow-soft">Enter the Field Guide →</a>
       </div>
@@ -87,22 +88,15 @@
           <div class="mt-10 flex items-center gap-4">
             <a href="#books" class="px-5 py-3 rounded-xl bg-electric text-white hover:bg-electric/90 transition shadow-soft">Enter the Field Guide →</a>
             <a href="#about" class="px-5 py-3 rounded-xl border border-ink/10 bg-white/70 hover:bg-white transition">Meet Valentina</a>
-           <a href="https://buy.stripe.com/your-checkout-link" 
-   class="inline-block px-5 py-3 rounded-xl bg-electric text-white hover:bg-electric/90 transition shadow-soft">
-   Get Your Inner Compass Blueprint →
-</a>
-
-
+            <a href="https://buy.stripe.com/your-checkout-link" class="inline-block px-5 py-3 rounded-xl bg-electric text-white hover:bg-electric/90 transition shadow-soft">Get Your Inner Compass Blueprint →</a>
           </div>
         </div>
-        <!-- Mystical symbols cluster -->
+
+        <!-- decorative icons -->
         <div class="absolute right-6 top-10 md:right-16 md:top-16 pointer-events-none">
           <div class="flex items-center gap-6 opacity-90">
-            <!-- star -->
             <svg class="w-10 h-10 text-gold symbol" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.39 5.64L20 9.27l-4.5 3.9 1.35 6.08L12 16.9l-4.85 2.35L8.5 13.17 4 9.27l5.61-1.63L12 2z"/></svg>
-            <!-- crescent -->
             <svg class="w-12 h-12 text-ink symbol" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.77 15.23A9.5 9.5 0 0 1 8.77 2.23a.75.75 0 0 0-1.03.9A8 8 0 1 0 20.87 16a.75.75 0 0 0 .9-1.03Z"/></svg>
-            <!-- burst -->
             <svg class="w-10 h-10 text-electric symbol" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 5L19 6l-4 3 2 5-5-3-5 3 2-5-4-3 5-.99L12 2z"/></svg>
           </div>
         </div>
@@ -112,25 +106,21 @@
     <!-- About -->
     <section id="about" class="py-20 md:py-28">
       <div class="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12 items-start">
-        <!-- Part 1: Grounded Author Bio -->
         <article class="bg-white rounded-2xl p-8 shadow-soft border border-black/5">
           <h2 class="font-display text-3xl mb-4">About Valentina</h2>
           <p class="text-lg leading-relaxed">
             Valentina Elore is an author and creator at <span class="font-semibold">Visionary Rebel Press</span>. Her work spans relationship clarity, archetypal patterning, and practical sovereignty. Through books, guides, and workshops, she helps readers decode manipulative dynamics and return to self-trust.
           </p>
           <p class="mt-4 text-lg leading-relaxed">
-            Current projects include:<span class="font-semibold"> The Inner Compass Blueprint™ </span>— Her Signature Numerology-Based Self-Mastery Framework.</p> <p><span class="font-semibold">The Spiritual Fckboy Field Guide™</span> <p><span class="font-semibold">The Spiritual QueenPin Field Guide™</span><p> <p><span class="font-semibold">La Brújula de la Sombra™</span>-A Spanish-First Shadow-Work workbook.<p> Valentina writes with clarity and humor, favoring simple language and deep insight over jargon.
+            Current projects include: <span class="font-semibold">The Inner Compass Blueprint™</span>, <span class="font-semibold">The Spiritual Fckboy Field Guide™</span>, <span class="font-semibold">The Spiritual QueenPin Field Guide™</span>, and <span class="font-semibold">La Brújula de la Sombra™</span>.
           </p>
         </article>
 
-        <!-- Part 2: Archetypal Heroine Identity -->
         <article class="relative bg-white rounded-2xl p-8 shadow-soft border border-black/5 overflow-hidden">
           <div class="absolute -top-10 -right-10 w-48 h-48 rotate-12 rounded-full bg-gold/30 blur-2xl"></div>
           <h3 class="font-display text-3xl mb-4">Archetype: The Witchy Philosopher Heroine</h3>
           <p class="text-lg leading-relaxed">
             Stars, moons, sage, and Ancient Latin incantations. A mirror in one hand and a wand in the other. Valentina moves between the seen and unseen, translating symbols into choices you can actually make.
-          </p>
-         
           </p>
         </article>
       </div>
@@ -160,13 +150,24 @@
             <p class="mt-2 text-[1.05rem] leading-relaxed">
               <span class="font-semibold">Mythic:</span> Decode the masked trickster archetypes; reclaim your agency as the heroine of your story.
             </p>
-            <a href="#" class="mt-4 inline-block underline underline-offset-4">Learn more</a>
+
+            <!-- BUY BUTTONS -->
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a href="https://amzn.to/42670RN" target="_blank" rel="noopener noreferrer"
+                 class="inline-block px-4 py-2 rounded-lg bg-electric text-white hover:bg-electric/90 shadow-soft font-semibold">
+                Buy Paperback
+              </a>
+              <a href="https://amzn.to/46h4FpC" target="_blank" rel="noopener noreferrer"
+                 class="inline-block px-4 py-2 rounded-lg bg-[#232F3E] text-white hover:bg-[#1a222d] shadow-soft font-semibold">
+                Buy Kindle
+              </a>
+            </div>
           </article>
 
-          <!-- Card 2: The Spiritual QueenPin Field Guide -->
+          <!-- Card 2: The Spiritual QueenPin Field Guide™ -->
           <article class="group rounded-2xl border border-black/5 bg-moon p-6 hover:shadow-soft transition">
             <div class="flex items-center justify-between">
-              <h3 class="font-display text-2xl">The Spiritual QueenPin Field Guide™ </h3>
+              <h3 class="font-display text-2xl">The Spiritual QueenPin Field Guide™</h3>
               <svg class="w-8 h-8 text-gold symbol" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.39 5.64L20 9.27l-4.5 3.9 1.35 6.08L12 16.9l-4.85 2.35L8.5 13.17 4 9.27l5.61-1.63L12 2z"/></svg>
             </div>
             <p class="mt-3 text-[1.05rem] leading-relaxed">
@@ -175,7 +176,18 @@
             <p class="mt-2 text-[1.05rem] leading-relaxed">
               <span class="font-semibold">Mythic:</span> Crown, mirror, and blade: a study in sovereignty beyond performance.
             </p>
-            <a href="#" class="mt-4 inline-block underline underline-offset-4">Learn more</a>
+
+            <!-- BUY BUTTONS -->
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a href="https://amzn.to/41ynfHb" target="_blank" rel="noopener noreferrer"
+                 class="inline-block px-4 py-2 rounded-lg bg-electric text-white hover:bg-electric/90 shadow-soft font-semibold">
+                Buy Paperback
+              </a>
+              <a href="https://amzn.to/45J43ci" target="_blank" rel="noopener noreferrer"
+                 class="inline-block px-4 py-2 rounded-lg bg-[#232F3E] text-white hover:bg-[#1a222d] shadow-soft font-semibold">
+                Buy Kindle
+              </a>
+            </div>
           </article>
 
           <!-- Card 3: La Brújula de la Sombra™ -->
@@ -185,24 +197,26 @@
               <svg class="w-8 h-8 text-ink symbol" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 5L19 6l-4 3 2 5-5-3-5 3 2-5-4-3 5-.99L12 2z"/></svg>
             </div>
             <p class="mt-3 text-[1.05rem] leading-relaxed">
-              <span class="font-semibold">Grounded:</span> A Spanish‑first workbook for shadow mapping, boundaries, and daily practice.
+              <span class="font-semibold">Grounded:</span> A Spanish-first workbook for shadow mapping, boundaries, and daily practice.
             </p>
             <p class="mt-2 text-[1.05rem] leading-relaxed">
               <span class="font-semibold">Mythic:</span> Navigate by stars and symbols—chart your path with dignity and truth.
             </p>
-            <a href="#" class="mt-4 inline-block underline underline-offset-4">Learn more</a>
+
+            <!-- keep for future links -->
+            <div class="mt-4 text-ink/60 text-sm italic">Links coming soon.</div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Contact / CTA Slim -->
+    <!-- Contact -->
     <section id="contact" class="py-16">
       <div class="mx-auto max-w-5xl px-6 text-center">
         <h2 class="font-display text-3xl">Collaborations, Media, & Events</h2>
         <p class="mt-4 text-lg text-ink/80">For interviews, speaking, or partnerships, reach out below.</p>
         <div class="mt-6 flex items-center justify-center gap-3">
-          <a href="#" class="px-4 py-2 rounded-xl bg-ink text-moon hover:bg-ink/90 transition">Email</a>
+          <a href="mailto:hello@valentinaelore.com" class="px-4 py-2 rounded-xl bg-ink text-moon hover:bg-ink/90 transition">Email</a>
           <a href="#" class="px-4 py-2 rounded-xl border border-ink/10 bg-white hover:bg-white/80 transition">Press Kit</a>
         </div>
       </div>
@@ -212,10 +226,13 @@
     <footer class="mt-auto border-t border-black/5 bg-white">
       <div class="mx-auto max-w-7xl px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <p class="text-sm">© 2025 Valentina Elore · Visionary Rebel Press</p>
+        <p class="text-xs text-ink/60">
+          As an Amazon Associate, I earn from qualifying purchases.
+        </p>
         <div class="flex items-center gap-5 text-sm">
-          <a href="#" aria-label="Amazon" class="underline underline-offset-4">Amazon</a>
-          <a href="#" aria-label="Instagram" class="underline underline-offset-4">Instagram</a>
-          <a href="#" aria-label="Gumroad" class="underline underline-offset-4">Gumroad</a>
+          <a href="https://www.amazon.com/stores/Valentina-Elore/author/B0DXXXXXXX" class="underline underline-offset-4">Amazon</a>
+          <a href="https://instagram.com/" class="underline underline-offset-4">Instagram</a>
+          <a href="https://gumroad.com/" class="underline underline-offset-4">Gumroad</a>
         </div>
       </div>
     </footer>
@@ -223,3 +240,5 @@
   </div>
 </body>
 </html>
+
+
